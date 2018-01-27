@@ -1,8 +1,26 @@
-/*This is an external document style sheet*/
+This is an external document style sheet*/
 
 body {
 	padding:10px;
 }
+
+a:link {
+	color: orange;
+}
+/*References the link to the email address we added*/
+/*a.newcolor:link {
+	This specifies to go to the element a, specifically the 
+	class newcolor, and the section link
+}*/
+
+a:hover	{
+	color:red;
+}
+
+a:visited {
+	color:purple;
+}
+
 .special {
 		color: red;
 	}
@@ -15,3 +33,21 @@ body {
 .third{
 	border: solid 5px green;
 }
+
+/*.second .third{
+	order: solid 5px black;
+	padding: 15px;
+	margin: 25px;
+}
+  This would specify the same commands for both second and third*/
+.leadmessage p{
+	font-family: sans-serif;
+
+}
+/*This will apply the style inside the selectors to the
+paragraph content inside the leadmessage class */
+
+p:nth-child(odd){
+	font-weight: bold;
+}
+/*Modifies every odd paragraph
