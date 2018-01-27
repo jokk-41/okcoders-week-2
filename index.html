@@ -1,15 +1,67 @@
 <!DOCTYPE html>
+<!-- when you push stuff online, web browsers look for files called index.html as the default. 
+So when you build your project directories, always start with an index.html file otw you'll
+have to rename everything to make it work  -->
 <html>
 <head>
 	<title></title>
+	<link rel="stylesheet" href="style.css" type="text/css">
+	<!-- links the style.css file to this index doc -->
+	<!-- This is an in-document style sheet -->
+<style >
+	li {
+	/*  This { is a selector – it identifies which thing you're going to attach that style to, in this case the things specified by the li tags { … }*/
+
+		font-weight: bold;
+		color: BurlyWood;
+		font-size: 16pt;
+
+		/* All these are called properties – they specify what you’re going to do to the li text. Every property has a default setting e.g. there’s a default font size but what CSS does is modify those default settings. */
+	}
+	#banner {
+	/*The pound # sign lets it know to look for the id attribute that has the word banner. If we didn't use # it would try to find a TAG called banner*/
+		color: darkblue;
+	}
+	/*.special {
+		color: purple;
+	}*/
+	.leadmessage {
+		color: darkgray;
+	}
+	/*The period . sign lets it know to look for an grab a class selector, not an id attribute and not a tag*/
+	/*.special {
+		color: purple;
+	}*/
+}
+</style>
 </head>
 <body>
-	<h1>Week 2 Classroom Examples</h1>
-	<ul>
+	<h1 id="banner">Week 2 Classroom Examples</h1>
+	<!-- We use id attributes because we don't want to have to stylize every single tag- h1, div, h3, etc. So this is why we're able to use the # sign.  -->
+	<!-- An id attribute name must be unique and used once. A class element name can be used more than once-->
+	<div>Website by <a href="mailto:jorungi4@gmail.com">Jo Kirungi</a></div>
+	<section>
+		<h3>About This Website</h3>
+		<p class="special" style="color:green;">
+		<!-- This is an in-line style sheet. It overrides the in-document and external-document style sheets. The only thing that can override this is a user-defined style sheet which gets applied after everything else -->
+		<!-- Read more into leadmessage special and how they're different -->
+			This is a website with website things showing off websites in a websitty way.
+		</p>
+		<p class="second">This is our second paragraph... there are many like it but this one is mine.</p>
+
+		<p class="third">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</section>
+
+<!-- 	<ul>
 		<li>Thing one</li>
 		<li>Thing two</li>
 		<li>Thing red</li>
 		<li>Thing blue</li>
-	</ul>
+	</ul> -->
 </body>
 </html>
